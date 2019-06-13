@@ -3,30 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ec5b089-fc4f-4e28-9321-3d9ab84f1489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Axon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/BoardAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Brain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Configuration.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Creature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/CreatureAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/CreatureComparators.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Eye.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/NameGenerator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/RouletteWheel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/SoftBody.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Tile.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/peripherals/KeyAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/peripherals/KeyCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/peripherals/MouseAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/peripherals/MouseButton.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/peripherals/Peripherals.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/renderers/BlankBoardRenderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/renderers/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/tests/NameGeneratorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/tests/RouletteWheelTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/util/MathUtil.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -42,12 +18,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+            </state>
+          </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -65,10 +45,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="40" />
     <option name="y" value="20" />
     <option name="width" value="1119" />
@@ -107,7 +88,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/evolv/io" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\OneDrive\Progetti personali\ProcessingTest\ProcessingTest\src\evolv\io" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,15 +169,15 @@
     <layout>
       <window_info id="Designer" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24962178" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32872504" />
+      <window_info anchor="bottom" id="Messages" weight="0.32872504" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32872504" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -204,13 +190,20 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/evolv/io/Model/Circle.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
         </state>
       </provider>
     </entry>
