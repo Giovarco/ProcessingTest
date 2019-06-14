@@ -21,6 +21,10 @@ public class Circle {
         this.color = color;
     }
 
+    public void setX(float x) { position.x = x; }
+
+    public void setY(float y) { position.y = y; }
+
     public float getX() {
         return position.x;
     }

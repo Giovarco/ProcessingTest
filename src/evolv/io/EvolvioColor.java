@@ -29,10 +29,21 @@ public class EvolvioColor extends PApplet {
 
     @Override
     public void draw() {
+        clear();
+        background(255);
+        drawBoard();
+    }
+
+    @Override
+    public void mouseClicked() {
+        creature.setX(mouseX);
+        creature.setY(mouseY);
+    }
+
+    private void drawBoard() {
         circleView.draw(creature);
         circleView.draw(food);
 
         line(creature.getX(), creature.getY(), food.getX(), food.getY());
     }
-
 }
