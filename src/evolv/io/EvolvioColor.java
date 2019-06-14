@@ -11,6 +11,9 @@ import java.util.List;
 
 public class EvolvioColor extends PApplet {
 
+    public static final int CREATURE_COUNT = 10;
+    public static final int FOOD_COUNT = 10;
+    
     CircleView circleView;
 
     List<Circle> creatureList;
@@ -26,13 +29,13 @@ public class EvolvioColor extends PApplet {
         circleView = new CircleView(this.g);
 
         creatureList = new ArrayList<>();
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = new PVector(random(0, width), random(0, height));
             creatureList.add(new Circle(creaturePosition, 10, new Color(255,0,0)));
         }
 
         foodList = new ArrayList<>();
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < FOOD_COUNT; i++) {
             PVector foodPosition = new PVector(random(0, width), random(0, height));
             foodList.add(new Circle(new PVector(foodPosition.x, foodPosition.y), 10, new Color(0,0,255)));
         }
