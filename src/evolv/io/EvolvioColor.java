@@ -52,10 +52,10 @@ public class EvolvioColor extends PApplet {
         background(255);
         drawBoard();
 
-        for(Circle creature : creatureList) {
-            Circle closestFood = null;
+        for(Creature creature : creatureList) {
+            Food closestFood = null;
             float closestFoodDistance = Float.POSITIVE_INFINITY;
-            for(Circle food : foodList) {
+            for(Food food : foodList) {
                 float currentFoodDistance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
                 if(currentFoodDistance < closestFoodDistance) {
                     closestFoodDistance = currentFoodDistance;
@@ -68,9 +68,9 @@ public class EvolvioColor extends PApplet {
             }
         }
 
-        for(Circle creature : creatureList) {
-            List<Circle> foodToRemove = new ArrayList<>();
-            for(Circle food : foodList) {
+        for(Creature creature : creatureList) {
+            List<Food> foodToRemove = new ArrayList<>();
+            for(Food food : foodList) {
                 if(food.getX() - food.getDiameter() > creature.getX() - creature.getDiameter()) {
                     if(food.getX() + food.getDiameter() < creature.getX() + creature.getDiameter()) {
                         if(food.getY() - food.getDiameter() > creature.getY() - creature.getDiameter()) {
@@ -86,15 +86,15 @@ public class EvolvioColor extends PApplet {
     }
 
     private void drawBoard() {
-        for(Circle creature : creatureList) {
+        for(Creature creature : creatureList) {
             circleView.draw(creature);
         }
-        for(Circle food : foodList) {
+        for(Food food : foodList) {
             circleView.draw(food);
         }
     }
 
-    private void moveCreatureTowardsFood(Circle creature, Circle food) {
+    private void moveCreatureTowardsFood(Creature creature, Food food) {
         PVector vectorDistanceToClosestCreature = new PVector(food.getX() - creature.getX(), food.getY() - creature.getY());
         PVector normalizedVectorDistance = vectorDistanceToClosestCreature.normalize();
         creature.setX(creature.getX() + normalizedVectorDistance.x);
