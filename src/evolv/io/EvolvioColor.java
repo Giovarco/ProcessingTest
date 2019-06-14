@@ -53,15 +53,7 @@ public class EvolvioColor extends PApplet {
         drawBoard();
 
         for(Creature creature : creatureList) {
-            Food closestFood = null;
-            float closestFoodDistance = Float.POSITIVE_INFINITY;
-            for(Food food : foodList) {
-                float currentFoodDistance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
-                if(currentFoodDistance < closestFoodDistance) {
-                    closestFoodDistance = currentFoodDistance;
-                    closestFood = food;
-                }
-            }
+            Food closestFood = getClosestFood(creature);
             creature.setWantedFood(closestFood);
             if(closestFood != null) {
                 moveCreatureTowardsFood(creature);
@@ -84,6 +76,19 @@ public class EvolvioColor extends PApplet {
             }
             foodList.removeAll(foodToRemove);
         }
+    }
+
+    private Food getClosestFood(Creature creature) {
+        Food closestFood = null;
+        float closestFoodDistance = Float.POSITIVE_INFINITY;
+        for(Food food : foodList) {
+            float currentFoodDistance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
+            if(currentFoodDistance < closestFoodDistance) {
+                closestFoodDistance = currentFoodDistance;
+                closestFood = food;
+            }
+        }
+        return closestFood;
     }
 
     private void drawBoard() {
