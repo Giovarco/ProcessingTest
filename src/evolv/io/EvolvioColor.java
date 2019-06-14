@@ -6,12 +6,14 @@ import processing.core.PApplet;
 import processing.core.PVector;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EvolvioColor extends PApplet {
 
     CircleView circleView;
 
-    Circle creature;
+    List<Circle> creatureList;
     Circle food;
 
     @Override
@@ -23,7 +25,12 @@ public class EvolvioColor extends PApplet {
     public void setup() {
         circleView = new CircleView(this.g);
 
-        creature = new Circle(new PVector(500, 500), 10, new Color(255,0,0));
+        creatureList = new ArrayList<>();
+        for(int i = 0; i < 10; i++) {
+            PVector creaturePosition = new PVector(random(0, width), random(0, height));
+            creatureList.add(new Circle(creaturePosition, 10, new Color(255,0,0)));
+        }
+
         food = new Circle(new PVector(700, 600), 10, new Color(0,0,255));
     }
 
@@ -34,16 +41,10 @@ public class EvolvioColor extends PApplet {
         drawBoard();
     }
 
-    @Override
-    public void mouseClicked() {
-        creature.setX(mouseX);
-        creature.setY(mouseY);
-    }
-
     private void drawBoard() {
-        circleView.draw(creature);
+        for(Circle creature : creatureList) {
+            circleView.draw(creature);
+        }
         circleView.draw(food);
-
-        line(creature.getX(), creature.getY(), food.getX(), food.getY());
     }
 }
