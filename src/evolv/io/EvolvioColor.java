@@ -14,7 +14,7 @@ public class EvolvioColor extends PApplet {
     CircleView circleView;
 
     List<Circle> creatureList;
-    Circle food;
+    List<Circle> foodList;
 
     @Override
     public void settings() {
@@ -31,7 +31,12 @@ public class EvolvioColor extends PApplet {
             creatureList.add(new Circle(creaturePosition, 10, new Color(255,0,0)));
         }
 
-        food = new Circle(new PVector(700, 600), 10, new Color(0,0,255));
+        foodList = new ArrayList<>();
+        for(int i = 0; i < 10; i++) {
+            PVector foodPosition = new PVector(random(0, width), random(0, height));
+            foodList.add(new Circle(new PVector(foodPosition.x, foodPosition.y), 10, new Color(0,0,255)));
+        }
+
     }
 
     @Override
@@ -39,41 +44,35 @@ public class EvolvioColor extends PApplet {
         clear();
         background(255);
         drawBoard();
-        Circle closestCreature = findClosestCreatureToFood();
-        moveClosestCreatureTowardsFood(closestCreature);
-        line(food.getX(), food.getY(), closestCreature.getX(), closestCreature.getY());
-    }
 
-    @Override
-    public void mouseClicked() {
-        food.setX(mouseX);
-        food.setY(mouseY);
-    }
-
-    private Circle findClosestCreatureToFood() {
-        Circle closestCreature = null;
-        float closestDistance = Float.POSITIVE_INFINITY;
         for(Circle creature : creatureList) {
-            float distance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
-            if(distance < closestDistance) {
-                closestDistance = distance;
-                closestCreature = creature;
+            Circle closestFood = null;
+            float closestFoodDistance = Float.POSITIVE_INFINITY;
+            for(Circle food : foodList) {
+                float currentFoodDistance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
+                if(currentFoodDistance < closestFoodDistance) {
+                    closestFoodDistance = currentFoodDistance;
+                    closestFood = food;
+                }
             }
+            moveCreatureTowardsFood(creature, closestFood);
+            line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
         }
-        return closestCreature;
     }
 
     private void drawBoard() {
         for(Circle creature : creatureList) {
             circleView.draw(creature);
         }
-        circleView.draw(food);
+        for(Circle food : foodList) {
+            circleView.draw(food);
+        }
     }
-    
-    private void moveClosestCreatureTowardsFood(Circle closestCreature) {
-        PVector vectorDistanceToClosestCreature = new PVector(food.getX() - closestCreature.getX(), food.getY() - closestCreature.getY());
+
+    private void moveCreatureTowardsFood(Circle creature, Circle food) {
+        PVector vectorDistanceToClosestCreature = new PVector(food.getX() - creature.getX(), food.getY() - creature.getY());
         PVector normalizedVectorDistance = vectorDistanceToClosestCreature.normalize();
-        closestCreature.setX(closestCreature.getX() + normalizedVectorDistance.x);
-        closestCreature.setY(closestCreature.getY() + normalizedVectorDistance.y);
+        creature.setX(creature.getX() + normalizedVectorDistance.x);
+        creature.setY(creature.getY() + normalizedVectorDistance.y);
     }
 }
