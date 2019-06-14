@@ -13,6 +13,8 @@ public class EvolvioColor extends PApplet {
 
     public static final int CREATURE_COUNT = 10;
     public static final int FOOD_COUNT = 10;
+    public static final int CREATURE_DIAMETER = 20;
+    public static final int FOOD_DIAMETER = 10;
 
     CircleView circleView;
 
@@ -31,13 +33,13 @@ public class EvolvioColor extends PApplet {
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = getRandomPosition();
-            creatureList.add(new Circle(creaturePosition, 20, new Color(255,0,0)));
+            creatureList.add(new Circle(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0)));
         }
 
         foodList = new ArrayList<>();
         for(int i = 0; i < FOOD_COUNT; i++) {
             PVector foodPosition = getRandomPosition();
-            foodList.add(new Circle(new PVector(foodPosition.x, foodPosition.y), 10, new Color(0,0,255)));
+            foodList.add(new Circle(new PVector(foodPosition.x, foodPosition.y), FOOD_DIAMETER, new Color(0,0,255)));
         }
 
     }
