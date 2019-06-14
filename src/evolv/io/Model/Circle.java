@@ -7,7 +7,7 @@ import processing.core.PVector;
 import java.awt.*;
 
 @Getter
-public class Circle {
+public abstract class Circle {
 
     Color color;
     float diameter;
