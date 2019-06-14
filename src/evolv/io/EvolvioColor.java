@@ -42,6 +42,12 @@ public class EvolvioColor extends PApplet {
         drawLineBetweenFoodAndClosestCreature();
     }
 
+    @Override
+    public void mouseClicked() {
+        food.setX(mouseX);
+        food.setY(mouseY);
+    }
+
     private void drawLineBetweenFoodAndClosestCreature() {
         Circle closestCreature = findClosestCreatureToFood();
         line(food.getX(), food.getY(), closestCreature.getX(), closestCreature.getY());
