@@ -62,14 +62,18 @@ public class EvolvioColor extends PApplet {
         }
 
         for(Creature creature : creatureList) {
-            List<Food> foodToRemove = new ArrayList<>();
-            for(Food food : foodList) {
-                if(areColliding(creature, food)) {
-                    foodToRemove.add(food);
-                }
-            }
-            foodList.removeAll(foodToRemove);
+            removeEatenFood(creature);
         }
+    }
+
+    private void removeEatenFood(Creature creature) {
+        List<Food> foodToRemove = new ArrayList<>();
+        for(Food food : foodList) {
+            if(areColliding(creature, food)) {
+                foodToRemove.add(food);
+            }
+        }
+        foodList.removeAll(foodToRemove);
     }
 
     private boolean areColliding(Creature creature, Food food) {
