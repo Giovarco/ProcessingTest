@@ -57,10 +57,14 @@ public class EvolvioColor extends PApplet {
             creature.setWantedFood(closestFood);
             if(closestFood != null) {
                 moveCreatureTowardsFood(creature);
-                line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
+                drawCreatureWantedFood(creature, creature.getWantedFood());
             }
             removeEatenFood(creature);
         }
+    }
+
+    private void drawCreatureWantedFood(Creature creature, Food closestFood) {
+        line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
     }
 
     private void removeEatenFood(Creature creature) {
