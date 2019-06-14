@@ -39,6 +39,25 @@ public class EvolvioColor extends PApplet {
         clear();
         background(255);
         drawBoard();
+        drawLineBetweenFoodAndClosestCreature();
+    }
+
+    private void drawLineBetweenFoodAndClosestCreature() {
+        Circle closestCreature = findClosestCreatureToFood();
+        line(food.getX(), food.getY(), closestCreature.getX(), closestCreature.getY());
+    }
+
+    private Circle findClosestCreatureToFood() {
+        Circle closestCreature = null;
+        float closestDistance = Float.POSITIVE_INFINITY;
+        for(Circle creature : creatureList) {
+            float distance = dist(creature.getX(), creature.getY(), food.getX(), food.getY());
+            if(distance < closestDistance) {
+                closestDistance = distance;
+                closestCreature = creature;
+            }
+        }
+        return closestCreature;
     }
 
     private void drawBoard() {
