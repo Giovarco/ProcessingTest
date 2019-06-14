@@ -31,7 +31,7 @@ public class EvolvioColor extends PApplet {
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = getRandomPosition();
-            creatureList.add(new Circle(creaturePosition, 10, new Color(255,0,0)));
+            creatureList.add(new Circle(creaturePosition, 20, new Color(255,0,0)));
         }
 
         foodList = new ArrayList<>();
@@ -58,8 +58,26 @@ public class EvolvioColor extends PApplet {
                     closestFood = food;
                 }
             }
-            moveCreatureTowardsFood(creature, closestFood);
-            line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
+            if(closestFood != null) {
+                moveCreatureTowardsFood(creature, closestFood);
+                line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
+            }
+        }
+
+        for(Circle creature : creatureList) {
+            List<Circle> foodToRemove = new ArrayList<>();
+            for(Circle food : foodList) {
+                if(food.getX() - food.getDiameter() > creature.getX() - creature.getDiameter()) {
+                    if(food.getX() + food.getDiameter() < creature.getX() + creature.getDiameter()) {
+                        if(food.getY() - food.getDiameter() > creature.getY() - creature.getDiameter()) {
+                            if(food.getY() + food.getDiameter() < creature.getY() + creature.getDiameter()) {
+                                foodToRemove.add(food);
+                            }
+                        }
+                    }
+                }
+            }
+            foodList.removeAll(foodToRemove);
         }
     }
 
