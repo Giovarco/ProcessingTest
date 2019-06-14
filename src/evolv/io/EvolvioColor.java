@@ -64,18 +64,25 @@ public class EvolvioColor extends PApplet {
         for(Creature creature : creatureList) {
             List<Food> foodToRemove = new ArrayList<>();
             for(Food food : foodList) {
-                if(food.getX() - food.getDiameter() > creature.getX() - creature.getDiameter()) {
-                    if(food.getX() + food.getDiameter() < creature.getX() + creature.getDiameter()) {
-                        if(food.getY() - food.getDiameter() > creature.getY() - creature.getDiameter()) {
-                            if(food.getY() + food.getDiameter() < creature.getY() + creature.getDiameter()) {
-                                foodToRemove.add(food);
-                            }
-                        }
-                    }
+                if(areColliding(creature, food)) {
+                    foodToRemove.add(food);
                 }
             }
             foodList.removeAll(foodToRemove);
         }
+    }
+
+    private boolean areColliding(Creature creature, Food food) {
+        if(food.getX() - food.getDiameter() > creature.getX() - creature.getDiameter()) {
+            if(food.getX() + food.getDiameter() < creature.getX() + creature.getDiameter()) {
+                if(food.getY() - food.getDiameter() > creature.getY() - creature.getDiameter()) {
+                    if(food.getY() + food.getDiameter() < creature.getY() + creature.getDiameter()) {
+                       return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 
     private Food getClosestFood(Creature creature) {

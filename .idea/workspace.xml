@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0ec5b089-fc4f-4e28-9321-3d9ab84f1489" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/Model/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/Model/Creature.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,12 +22,12 @@
         <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+              <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
                 <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#3793#3794#0" expanded="true" />
+                <element signature="e#4025#4026#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -318,12 +317,12 @@
     <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
-          <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
+          <caret line="67" column="43" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#650#651#0" expanded="true" />
             <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#3793#3794#0" expanded="true" />
+            <element signature="e#4025#4026#0" expanded="true" />
           </folding>
         </state>
       </provider>
