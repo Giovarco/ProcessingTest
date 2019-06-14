@@ -39,18 +39,15 @@ public class EvolvioColor extends PApplet {
         clear();
         background(255);
         drawBoard();
-        drawLineBetweenFoodAndClosestCreature();
+        Circle closestCreature = findClosestCreatureToFood();
+        moveClosestCreatureTowardsFood(closestCreature);
+        line(food.getX(), food.getY(), closestCreature.getX(), closestCreature.getY());
     }
 
     @Override
     public void mouseClicked() {
         food.setX(mouseX);
         food.setY(mouseY);
-    }
-
-    private void drawLineBetweenFoodAndClosestCreature() {
-        Circle closestCreature = findClosestCreatureToFood();
-        line(food.getX(), food.getY(), closestCreature.getX(), closestCreature.getY());
     }
 
     private Circle findClosestCreatureToFood() {
@@ -71,5 +68,12 @@ public class EvolvioColor extends PApplet {
             circleView.draw(creature);
         }
         circleView.draw(food);
+    }
+    
+    private void moveClosestCreatureTowardsFood(Circle closestCreature) {
+        PVector vectorDistanceToClosestCreature = new PVector(food.getX() - closestCreature.getX(), food.getY() - closestCreature.getY());
+        PVector normalizedVectorDistance = vectorDistanceToClosestCreature.normalize();
+        closestCreature.setX(closestCreature.getX() + normalizedVectorDistance.x);
+        closestCreature.setY(closestCreature.getY() + normalizedVectorDistance.y);
     }
 }
