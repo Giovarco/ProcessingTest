@@ -11,10 +11,10 @@ import java.util.List;
 
 public class EvolvioColor extends PApplet {
 
-    public static final int CREATURE_COUNT = 10;
-    public static final int FOOD_COUNT = 10;
-    public static final int CREATURE_DIAMETER = 20;
-    public static final int FOOD_DIAMETER = 10;
+    private static final int CREATURE_COUNT = 10;
+    private static final int FOOD_COUNT = 10;
+    private static final int CREATURE_DIAMETER = 20;
+    private static final int FOOD_DIAMETER = 10;
 
     CircleView circleView;
 
