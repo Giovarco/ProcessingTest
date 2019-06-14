@@ -1,6 +1,7 @@
 package evolv.io;
 
 import evolv.io.Model.Circle;
+import evolv.io.Model.Creature;
 import evolv.io.Model.Food;
 import evolv.io.View.CircleView;
 import processing.core.PApplet;
@@ -19,7 +20,7 @@ public class EvolvioColor extends PApplet {
 
     CircleView circleView;
 
-    List<Circle> creatureList;
+    List<Creature> creatureList;
     List<Food> foodList;
 
     @Override
@@ -34,7 +35,7 @@ public class EvolvioColor extends PApplet {
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = getRandomPosition();
-            creatureList.add(new Circle(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0)));
+            creatureList.add(new Creature(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0)));
         }
 
         foodList = new ArrayList<>();
