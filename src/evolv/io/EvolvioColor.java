@@ -31,6 +31,8 @@ public class EvolvioColor extends PApplet {
     public void draw() {
         circleView.draw(creature);
         circleView.draw(food);
+
+        line(creature.getX(), creature.getY(), food.getX(), food.getY());
     }
 
 }
