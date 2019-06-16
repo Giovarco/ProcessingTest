@@ -1,6 +1,5 @@
 package evolv.io;
 
-import evolv.io.Model.Circle;
 import evolv.io.Model.Creature;
 import evolv.io.Model.Food;
 import evolv.io.View.CircleView;
@@ -48,15 +47,11 @@ public class EvolvioColor extends PApplet {
 
     @Override
     public void draw() {
-        for(Creature creature : creatureList) {
-            Food closestFood = getClosestFood(creature);
-            creature.setWantedFood(closestFood);
-            if(closestFood != null) {
-                moveCreatureTowardsFood(creature);
-            }
-            removeEatenFood(creature);
-        }
+        compute();
+        drawAll();
+    }
 
+    private void drawAll() {
         clear();
         background(255);
         drawBoard();
@@ -64,6 +59,17 @@ public class EvolvioColor extends PApplet {
             if(creature.getWantedFood() != null) {
                 drawCreatureWantedFood(creature, creature.getWantedFood());
             }
+        }
+    }
+
+    private void compute() {
+        for(Creature creature : creatureList) {
+            Food closestFood = getClosestFood(creature);
+            creature.setWantedFood(closestFood);
+            if(closestFood != null) {
+                moveCreatureTowardsFood(creature);
+            }
+            removeEatenFood(creature);
         }
     }
 
