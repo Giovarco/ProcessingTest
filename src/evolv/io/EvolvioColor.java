@@ -2,7 +2,6 @@ package evolv.io;
 
 import evolv.io.Model.Creature;
 import evolv.io.Model.Food;
-import evolv.io.View.CircleView;
 import evolv.io.View.CreatureWantedFoodDrawer;
 import processing.core.PApplet;
 import processing.core.PVector;
@@ -18,8 +17,8 @@ public class EvolvioColor extends PApplet {
     private static final int CREATURE_DIAMETER = 20;
     private static final int FOOD_DIAMETER = 10;
 
-    CircleView circleView;
     CreatureWantedFoodDrawer creatureWantedFoodDrawer;
+    CircleDrawer circleDrawer;
 
     List<Creature> creatureList;
     List<Food> foodList;
@@ -31,9 +30,9 @@ public class EvolvioColor extends PApplet {
 
     @Override
     public void setup() {
-        circleView = new CircleView(this.g);
         creatureWantedFoodDrawer = new CreatureWantedFoodDrawer(this.g);
-
+        circleDrawer = new CircleDrawer(this.g);
+        
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = getRandomPosition();
@@ -57,7 +56,8 @@ public class EvolvioColor extends PApplet {
     private void drawAll() {
         clear();
         background(255);
-        drawBoard();
+        circleDrawer.draw(creatureList, foodList);
+
         for(Creature creature : creatureList) {
             if(creature.getWantedFood() != null) {
                 creatureWantedFoodDrawer.draw(creature);
@@ -110,15 +110,6 @@ public class EvolvioColor extends PApplet {
             }
         }
         return closestFood;
-    }
-
-    private void drawBoard() {
-        for(Creature creature : creatureList) {
-            circleView.draw(creature);
-        }
-        for(Food food : foodList) {
-            circleView.draw(food);
-        }
     }
 
     private void moveCreatureTowardsFood(Creature creature) {
