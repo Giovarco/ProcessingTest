@@ -3,6 +3,7 @@ package evolv.io;
 import evolv.io.Model.Creature;
 import evolv.io.Model.Food;
 import evolv.io.View.CircleView;
+import evolv.io.View.CreatureWantedFoodDrawer;
 import processing.core.PApplet;
 import processing.core.PVector;
 
@@ -18,6 +19,7 @@ public class EvolvioColor extends PApplet {
     private static final int FOOD_DIAMETER = 10;
 
     CircleView circleView;
+    CreatureWantedFoodDrawer creatureWantedFoodDrawer;
 
     List<Creature> creatureList;
     List<Food> foodList;
@@ -30,6 +32,7 @@ public class EvolvioColor extends PApplet {
     @Override
     public void setup() {
         circleView = new CircleView(this.g);
+        creatureWantedFoodDrawer = new CreatureWantedFoodDrawer(this.g);
 
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
@@ -57,7 +60,7 @@ public class EvolvioColor extends PApplet {
         drawBoard();
         for(Creature creature : creatureList) {
             if(creature.getWantedFood() != null) {
-                drawCreatureWantedFood(creature, creature.getWantedFood());
+                creatureWantedFoodDrawer.draw(creature);
             }
         }
     }
@@ -71,10 +74,6 @@ public class EvolvioColor extends PApplet {
             }
             removeEatenFood(creature);
         }
-    }
-
-    private void drawCreatureWantedFood(Creature creature, Food closestFood) {
-        line(creature.getX(), creature.getY(), closestFood.getX(), closestFood.getY());
     }
 
     private void removeEatenFood(Creature creature) {
