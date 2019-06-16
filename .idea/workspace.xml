@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec5b089-fc4f-4e28-9321-3d9ab84f1489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/evolv/io/CircleDrawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/evolv/io/View/CircleView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,17 +18,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="197">
+              <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#650#651#0" expanded="true" />
                 <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#4174#4175#0" expanded="true" />
+                <element signature="e#3973#3974#0" expanded="true" />
+                <element signature="e#4044#4045#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="134">
+              <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -70,9 +78,9 @@
         <option value="$PROJECT_DIR$/src/evolv/io/Model/Food.java" />
         <option value="$PROJECT_DIR$/src/evolv/io/Model/Circle.java" />
         <option value="$PROJECT_DIR$/src/evolv/io/Model/Creature.java" />
-        <option value="$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java" />
         <option value="$PROJECT_DIR$/src/evolv/io/CircleDrawer.java" />
         <option value="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" />
+        <option value="$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java" />
       </list>
     </option>
   </component>
@@ -335,13 +343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="15" column="52" selection-start-line="15" selection-start-column="52" selection-end-line="15" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/evolv/io/View/CircleView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -358,14 +359,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="34" column="8" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+        <state relative-caret-position="197">
+          <caret line="59" column="34" selection-start-line="59" selection-start-column="34" selection-end-line="59" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#650#651#0" expanded="true" />
             <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#4174#4175#0" expanded="true" />
+            <element signature="e#3973#3974#0" expanded="true" />
+            <element signature="e#4044#4045#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/evolv/io/View/CreatureWantedFoodDrawer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="134">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
         </state>
       </provider>
     </entry>

@@ -32,7 +32,7 @@ public class EvolvioColor extends PApplet {
     public void setup() {
         creatureWantedFoodDrawer = new CreatureWantedFoodDrawer(this.g);
         circleDrawer = new CircleDrawer(this.g);
-        
+
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
             PVector creaturePosition = getRandomPosition();
@@ -57,12 +57,7 @@ public class EvolvioColor extends PApplet {
         clear();
         background(255);
         circleDrawer.draw(creatureList, foodList);
-
-        for(Creature creature : creatureList) {
-            if(creature.getWantedFood() != null) {
-                creatureWantedFoodDrawer.draw(creature);
-            }
-        }
+        creatureWantedFoodDrawer.draw(creatureList);
     }
 
     private void compute() {
