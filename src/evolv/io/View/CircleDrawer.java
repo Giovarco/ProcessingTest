@@ -26,5 +26,10 @@ public class CircleDrawer extends PApplet {
     private void drawCircle(Circle circle) {
         fill(circle.getColor().getRed(), circle.getColor().getGreen(), circle.getColor().getBlue());
         ellipse(circle.getX(), circle.getY(), circle.getDiameter(), circle.getDiameter());
+        if(circle instanceof Creature) {
+            Creature creature = (Creature) circle;
+            fill(0);
+            text(creature.getEnergy(), creature.getX(), creature.getY());
+        }
     }
 }
