@@ -42,8 +42,7 @@ public class EvolvioColor extends PApplet {
 
         foodList = new ArrayList<>();
         for(int i = 0; i < FOOD_COUNT; i++) {
-            PVector foodPosition = getRandomPosition();
-            foodList.add(new Food(new PVector(foodPosition.x, foodPosition.y), FOOD_DIAMETER, new Color(0,0,255)));
+            createFood();
         }
 
     }
@@ -65,10 +64,14 @@ public class EvolvioColor extends PApplet {
         for(Creature creature : creatureList) {
             Food closestFood = getClosestFood(creature);
             creature.setWantedFood(closestFood);
+
             if(closestFood != null) {
                 moveCreatureTowardsFood(creature);
             }
+
             removeEatenFood(creature);
+
+            renewOnBoardFood();
         }
     }
 
@@ -118,5 +121,21 @@ public class EvolvioColor extends PApplet {
 
     private PVector getRandomPosition() {
         return new PVector(random(0, width), random(0, height));
+    }
+
+    private void createFood() {
+        PVector foodPosition = getRandomPosition();
+        foodList.add(new Food(new PVector(foodPosition.x, foodPosition.y), FOOD_DIAMETER, new Color(0,0,255)));
+    }
+
+    private void renewOnBoardFood() {
+        int foodOnBoard = foodList.size();
+        if(foodOnBoard < FOOD_COUNT) {
+            int foodToGenerate = FOOD_COUNT - foodOnBoard;
+            while(foodToGenerate != 0) {
+                createFood();
+                foodToGenerate--;
+            }
+        }
     }
 }
