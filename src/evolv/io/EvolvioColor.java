@@ -39,8 +39,7 @@ public class EvolvioColor extends PApplet {
 
         creatureList = new ArrayList<>();
         for(int i = 0; i < CREATURE_COUNT; i++) {
-            PVector creaturePosition = getRandomPosition();
-            creatureList.add(new Creature(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0),width/2));
+            createCreature();
         }
 
         foodList = new ArrayList<>();
@@ -150,5 +149,10 @@ public class EvolvioColor extends PApplet {
                 foodToGenerate--;
             }
         }
+    }
+
+    private void createCreature() {
+        PVector creaturePosition = getRandomPosition();
+        creatureList.add(new Creature(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0),width/2));
     }
 }
