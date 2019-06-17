@@ -83,6 +83,8 @@ public class EvolvioColor extends PApplet {
         creatureList.removeAll(creaturesToRemove);
 
         renewOnBoardFood();
+
+        renewOnBoardCreatures();
     }
 
     private void removeEatenFood(Creature creature) {
@@ -154,5 +156,16 @@ public class EvolvioColor extends PApplet {
     private void createCreature() {
         PVector creaturePosition = getRandomPosition();
         creatureList.add(new Creature(creaturePosition, CREATURE_DIAMETER, new Color(255,0,0),width/2));
+    }
+
+    private void renewOnBoardCreatures() {
+        int creatureOnBoard = creatureList.size();
+        if(creatureOnBoard < CREATURE_COUNT) {
+            int creaturesToGenerate = CREATURE_COUNT - creatureOnBoard;
+            while(creaturesToGenerate != 0) {
+                createCreature();
+                creaturesToGenerate--;
+            }
+        }
     }
 }

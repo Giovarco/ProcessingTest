@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ec5b089-fc4f-4e28-9321-3d9ab84f1489" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/evolv/io/EvolvioColor.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
@@ -21,12 +22,13 @@
         <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="355">
-              <caret line="156" column="5" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+              <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#728#729#0" expanded="true" />
-                <element signature="e#758#759#0" expanded="true" />
-                <element signature="e#4372#4373#0" expanded="true" />
+                <element signature="e#777#778#0" expanded="true" />
+                <element signature="e#807#808#0" expanded="true" />
+                <element signature="e#4611#4612#0" expanded="true" />
+                <element signature="e#4682#4683#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -157,6 +159,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/evolv/io" />
+    <property name="restartRequiresConfirmation" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -354,12 +357,13 @@
     <entry file="file://$PROJECT_DIR$/src/evolv/io/EvolvioColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
-          <caret line="156" column="5" selection-start-line="156" selection-start-column="5" selection-end-line="156" selection-end-column="5" />
+          <caret line="169" column="5" selection-start-line="169" selection-start-column="5" selection-end-line="169" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#728#729#0" expanded="true" />
-            <element signature="e#758#759#0" expanded="true" />
-            <element signature="e#4372#4373#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="true" />
+            <element signature="e#4611#4612#0" expanded="true" />
+            <element signature="e#4682#4683#0" expanded="true" />
           </folding>
         </state>
       </provider>
