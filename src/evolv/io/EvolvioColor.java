@@ -64,6 +64,8 @@ public class EvolvioColor extends PApplet {
     }
 
     private void compute() {
+        List<Creature> creaturesToRemove = new ArrayList<>();
+
         for(Creature creature : creatureList) {
             Food closestFood = getClosestFood(creature);
             creature.setWantedFood(closestFood);
@@ -71,12 +73,17 @@ public class EvolvioColor extends PApplet {
             if(closestFood != null) {
                 moveCreatureTowardsFood(creature);
                 creature.setEnergy(creature.getEnergy()-1);
+                if(creature.getEnergy() <= 0 ) {
+                    creaturesToRemove.add(creature);
+                }
             }
 
             removeEatenFood(creature);
 
             renewOnBoardFood();
         }
+
+        creatureList.removeAll(creaturesToRemove);
     }
 
     private void removeEatenFood(Creature creature) {
