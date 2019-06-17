@@ -78,11 +78,11 @@ public class EvolvioColor extends PApplet {
             }
 
             removeEatenFood(creature);
-
-            renewOnBoardFood();
         }
 
         creatureList.removeAll(creaturesToRemove);
+
+        renewOnBoardFood();
     }
 
     private void removeEatenFood(Creature creature) {
