@@ -31,6 +31,8 @@ public class EvolvioColor extends PApplet {
 
     @Override
     public void setup() {
+        frameRate(60);
+        
         creatureWantedFoodDrawer = new CreatureWantedFoodDrawer(this.g);
         circleDrawer = new CircleDrawer(this.g);
 
