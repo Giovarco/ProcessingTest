@@ -18,6 +18,7 @@ public class EvolvioColor extends PApplet {
     private static final int CREATURE_DIAMETER = 20;
     private static final int FOOD_DIAMETER = 10;
     private static final int MAX_FRAMERATE = 60;
+    private static final int FOOD_ENERGY = 50;
 
     CreatureWantedFoodDrawer creatureWantedFoodDrawer;
     CircleDrawer circleDrawer;
@@ -91,6 +92,7 @@ public class EvolvioColor extends PApplet {
         List<Food> foodToRemove = new ArrayList<>();
         for(Food food : foodList) {
             if(areColliding(creature, food)) {
+                creature.setEnergy(creature.getEnergy() + FOOD_ENERGY);
                 foodToRemove.add(food);
             }
         }
