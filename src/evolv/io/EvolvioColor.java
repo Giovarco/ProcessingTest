@@ -2,6 +2,7 @@ package evolv.io;
 
 import evolv.io.Model.Creature;
 import evolv.io.Model.Food;
+import evolv.io.View.CircleDrawer;
 import evolv.io.View.CreatureWantedFoodDrawer;
 import processing.core.PApplet;
 import processing.core.PVector;

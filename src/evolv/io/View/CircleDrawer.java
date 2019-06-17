@@ -1,4 +1,4 @@
-package evolv.io;
+package evolv.io.View;
 
 import evolv.io.Model.Circle;
 import evolv.io.Model.Creature;
