@@ -19,8 +19,12 @@ public class Creature extends Circle {
     @Setter(AccessLevel.NONE)
     float speed;
 
-    public Creature(PVector pVector, float diameter, Color color) {
+    @Setter(AccessLevel.NONE)
+    float energy;
+
+    public Creature(PVector pVector, float diameter, Color color, float energy) {
         super(pVector, diameter, color);
         speed = 60;
+        this.energy = energy;
     }
 }
