@@ -118,8 +118,8 @@ public class EvolvioColor extends PApplet {
         Food creatureWantedFood = creature.getWantedFood();
         PVector vectorDistanceToClosestCreature = new PVector(creatureWantedFood.getX() - creature.getX(), creatureWantedFood.getY() - creature.getY());
         PVector normalizedVectorDistance = vectorDistanceToClosestCreature.normalize();
-        creature.setX(creature.getX() + normalizedVectorDistance.x / MAX_FRAMERATE);
-        creature.setY(creature.getY() + normalizedVectorDistance.y / MAX_FRAMERATE);
+        creature.setX(creature.getX() + normalizedVectorDistance.x * creature.getSpeed() / MAX_FRAMERATE);
+        creature.setY(creature.getY() + normalizedVectorDistance.y * creature.getSpeed() / MAX_FRAMERATE);
     }
 
     private PVector getRandomPosition() {
