@@ -70,6 +70,7 @@ public class EvolvioColor extends PApplet {
 
             if(closestFood != null) {
                 moveCreatureTowardsFood(creature);
+                creature.setEnergy(creature.getEnergy()-1);
             }
 
             removeEatenFood(creature);
